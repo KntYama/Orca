@@ -1,5 +1,6 @@
 # Prerequisites
 *.d
+*.vs
 
 # Compiled Object files
 *.slo
@@ -30,3 +31,12 @@
 *.exe
 *.out
 *.app
+
+# Output directories
+*Debug
+*Release
+*obj
+*lib
+
+# User files
+*.user
