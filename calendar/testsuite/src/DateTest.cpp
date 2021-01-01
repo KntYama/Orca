@@ -71,3 +71,14 @@ TEST(DateTest, IncrementDecrementTest) {
     EXPECT_EQ(12, date.month().val());
     EXPECT_EQ(31, date.day().val());
 }
+
+TEST(DateTest, DayOutOfRangeTest) {
+    std::string actual = "";
+    try {
+        orca::calendar::Day day(32);
+    }
+    catch (const std::exception & e) {
+        actual = e.what();
+    }
+    EXPECT_TRUE(actual != "");
+}

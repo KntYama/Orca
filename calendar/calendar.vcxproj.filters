@@ -5,6 +5,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="calendar\exception">
+      <UniqueIdentifier>{a91ee9b0-b255-499e-a87b-b456c774c27d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Date.cpp">
@@ -15,6 +18,9 @@
     </ClCompile>
     <ClCompile Include="src\Tenor.cpp">
       <Filter>calendar</Filter>
+    </ClCompile>
+    <ClCompile Include="src\exception\CalendarException.cpp">
+      <Filter>calendar\exception</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -29,6 +35,9 @@
     </ClInclude>
     <ClInclude Include="include\orca\calendar\Tenor.h">
       <Filter>calendar</Filter>
+    </ClInclude>
+    <ClInclude Include="include\orca\calendar\exception\CalendarException.h">
+      <Filter>calendar\exception</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

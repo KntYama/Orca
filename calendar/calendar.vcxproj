@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Date.cpp" />
+    <ClCompile Include="src\exception\CalendarException.cpp" />
     <ClCompile Include="src\Tenor.cpp" />
     <ClCompile Include="src\YearMonthDay.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\orca\calendar\Date.h" />
+    <ClInclude Include="include\orca\calendar\exception\CalendarException.h" />
     <ClInclude Include="include\orca\calendar\export.h" />
     <ClInclude Include="include\orca\calendar\Tenor.h" />
     <ClInclude Include="include\orca\calendar\YearMonthDay.h" />
