@@ -1,5 +1,7 @@
 #include "orca/calendar/YearMonthDay.h"
 
+#include "orca/Exception.h"
+
 namespace orca {
 namespace calendar {
     Year& Year::operator=(const Year& rhs)
@@ -63,6 +65,13 @@ namespace calendar {
     bool Month::operator>=(const Month& rhs) const
     {
         return !operator<(rhs);
+    }
+    Day::Day(std::size_t val)
+        :Day()
+    {
+        ORCA_REQUIRE(val > 0 && val <= 31,
+            "day value must be within [1, 31].");
+        _val = val;
     }
     Day& Day::operator=(const Day& rhs)
     {

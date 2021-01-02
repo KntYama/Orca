@@ -2,6 +2,7 @@
 
 #include <boost/date_time/gregorian/greg_date.hpp>
 
+#include "orca/Exception.h"
 #include "orca/calendar/YearMonthDay.h"
 
 namespace orca {
@@ -97,7 +98,7 @@ namespace calendar {
         case 12:
             return Month::Dec();
         default:
-            throw std::exception("bad month.");
+            ORCA_THROW_EXCEPTION("bad month.");
             break;
         }
     }

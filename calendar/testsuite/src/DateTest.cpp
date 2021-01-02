@@ -2,8 +2,9 @@
 
 #include <vector>
 
-#include "orca/calendar/YearMonthDay.h"
+#include "orca/Exception.h"
 #include "orca/calendar/Date.h"
+#include "orca/calendar/YearMonthDay.h"
 
 TEST(DateTest, ConstructorTest) {
     orca::calendar::Year year(2020);
@@ -73,12 +74,22 @@ TEST(DateTest, IncrementDecrementTest) {
 }
 
 TEST(DateTest, DayOutOfRangeTest) {
-    std::string actual = "";
+    std::string actual1;
+    std::string actual2;
     try {
         orca::calendar::Day day(32);
     }
-    catch (const std::exception & e) {
-        actual = e.what();
+    catch (const orca::Exception & e) {
+        actual1 = e.message();
     }
-    EXPECT_TRUE(actual != "");
+    try {
+        orca::calendar::Day day(0);
+    }
+    catch (const orca::Exception & e) {
+        actual2 = e.message();
+    }
+    EXPECT_EQ(actual1, 
+        "day value must be within [1, 31].");
+    EXPECT_EQ(actual2, 
+        "day value must be within [1, 31].");
 }

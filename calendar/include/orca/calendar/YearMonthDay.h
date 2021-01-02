@@ -4,7 +4,6 @@
 #include <cstddef>
 
 #include "orca/calendar/export.h"
-#include "orca/calendar/exception/CalendarException.h"
 
 namespace orca {
 namespace calendar {
@@ -72,10 +71,7 @@ namespace calendar {
     class CALENDAR_API Day {
     public:
         Day() :_val(1) {}
-        explicit Day(std::size_t val) :_val(val) 
-        {
-            CALENDAR_REQUIRE(val <= 31, " day cannot excceed 31.");
-        }
+        explicit Day(std::size_t val);
         Day(const Day& rhs) :_val(rhs._val) {}
 
         ~Day() noexcept {}
