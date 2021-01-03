@@ -1,0 +1,10 @@
+index_code,currency,index,tenor,fixing_lag,day_count_convention,fixing_business_centers,period_business_centers
+usd_sofr_on,usd,sofr,on,0,act360,usg,nyk
+usd_fedfunds_on,usd,fedfunds,on,0,act360,nyk,nyk
+eur_estr_on,eur,estr,on,0,act360,eur,eur
+eur_euribor_1m,eur,euribor,1m,2,act360,eur,eur
+eur_euribor_3m,eur,euribor,3m,2,act360,eur,eur
+eur_euribor_6m,eur,euribor,6m,2,act360,eur,eur
+jpy_tona_on,jpy,tona,on,0,act365f,tky,tky
+gbp_sonia_on,gbp,sonia,on,0,act365f,lon,lon
+chf_saron_on,chf,saron,on,0,act360,zur,zur

@@ -1,0 +1,11 @@
+interest_rate_leg_code,reference_index_code,paymemt_currency,payment_frequency,accumulate_method,day_count_convention,days_to_start,period_business_centers,payment_lag
+usd_sofr_ois_short,usd_sofr_on,usd,once,,act360,2,nyk,2
+usd_sofr_ois_long,usd_sofr_on,usd,annual,,act360,2,nyk,2
+usd_fixed_ois_short,fixed,usd,once,,act360,2,nyk,0
+usd_fixed_ois_long,fixed,usd,annual,,act360,2,nyk,0
+usd_sofr_xccy,usd_sofr_on,usd,quaterly_annual,,act360,2,nyk,2
+usd_fedfunds_ois_short,usd_fedfunds_on,usd,once,,act360,2,nyk,2
+usd_fedfunds_on_ois_long,usd_fedfunds_on,usd,annual,,act360,2,nyk,2
+eur_estr_on_ois_short,eur_estr_on,eur,annual,,act360,2,eur,2
+eur_estr_on_ois_long,eur_estr_on,eur,annual,,act360,2,eur,2
+eur_estr_on_xccy,eur_estr_on,eur,annual,,act360,2,eur,2

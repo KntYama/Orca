@@ -7,12 +7,14 @@ TEST(ExceptionTest, MessagesTest) {
     const char* expectedFileName = "Expected FileName";
     const char* expectedFunctionName = "Expected FunctionName";
     int expectedLine = 1;
+    const char* expectedWhat = "[message]: Expected Message; [file]: Expected FileName; [function]: Expected FunctionName; [line]: 1;";
     
     std::string actualMessage; 
     std::string actualFileName; 
     std::string actualFunctionName; 
     int actualLine;
-    
+    std::string actualWhat;
+
     try {
         throw orca::Exception(expectedMessage, expectedFileName, 
             expectedFunctionName, expectedLine);
@@ -22,11 +24,13 @@ TEST(ExceptionTest, MessagesTest) {
         actualFileName = e.fileName();
         actualFunctionName = e.functionName();
         actualLine = e.line();
+        actualWhat = e.what();
     }
     EXPECT_EQ(expectedMessage, actualMessage);
     EXPECT_EQ(expectedFileName, actualFileName);
     EXPECT_EQ(expectedFunctionName, actualFunctionName);
     EXPECT_EQ(expectedLine, actualLine);
+    EXPECT_EQ(expectedWhat, actualWhat);
 }
 
 TEST(ExceptionTest, ThrowMacroTest) {

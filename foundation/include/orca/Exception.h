@@ -5,7 +5,7 @@
 #include <string>
 #include <sstream>
 
-#include "orca/export.h"
+#include "orca/FoundationExport.h"
 
 namespace orca {
     class FOUNDATION_API Exception : public std::exception {
@@ -16,22 +16,23 @@ namespace orca {
             const char* functionName,
             int line);
 
-        ~Exception() noexcept;
+        ~Exception() noexcept {}
 
         const char* what() const noexcept;
 
-        const std::string& message() const noexcept;
-        const char* fileName() const noexcept;
-        const char* functionName() const noexcept;
-        int line() const noexcept;
+        const std::string& message() const noexcept { return _message; }
+        const char* fileName() const noexcept { return _fileName; }
+        const char* functionName() const noexcept { return _functionName; }
+        int line() const noexcept { return _line; }
 
     private:
+        const std::string _what;
         const std::string _message;
         const char* _fileName;
         const char* _functionName;
         const int _line;
     };
-}
+} // namespace orca
 
 #define ORCA_THROW_EXCEPTION(message) \
 { \
@@ -42,6 +43,16 @@ namespace orca {
 }
 
 #define ORCA_REQUIRE(condition, message) \
+{ \
+    if (!(condition)) { \
+        std::ostringstream oss; \
+        oss << message; \
+        throw orca::Exception(oss.str(), \
+            __FILE__, __func__, __LINE__); \
+    } \
+}
+
+#define ORCA_CONFIRM(condition, message) \
 { \
     if (!(condition)) { \
         std::ostringstream oss; \

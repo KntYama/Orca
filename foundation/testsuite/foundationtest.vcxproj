@@ -153,6 +153,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\DateTest.cpp" />
     <ClCompile Include="src\ExceptionTest.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>

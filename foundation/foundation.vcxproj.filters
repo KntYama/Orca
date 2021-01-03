@@ -5,18 +5,45 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="orca\calendar">
+      <UniqueIdentifier>{92464c69-f988-4b30-b9ba-a5ed16efca53}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\orca\FoundationExport.h">
+      <Filter>orca</Filter>
+    </ClInclude>
     <ClInclude Include="include\orca\Exception.h">
       <Filter>orca</Filter>
     </ClInclude>
-    <ClInclude Include="include\orca\export.h">
-      <Filter>orca</Filter>
+    <ClInclude Include="include\orca\calendar\Date.h">
+      <Filter>orca\calendar</Filter>
+    </ClInclude>
+    <ClInclude Include="include\orca\calendar\Tenor.h">
+      <Filter>orca\calendar</Filter>
+    </ClInclude>
+    <ClInclude Include="include\orca\calendar\YearMonthDay.h">
+      <Filter>orca\calendar</Filter>
+    </ClInclude>
+    <ClInclude Include="include\orca\calendar\Period.h">
+      <Filter>orca\calendar</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Exception.cpp">
       <Filter>orca</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Date.cpp">
+      <Filter>orca\calendar</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tenor.cpp">
+      <Filter>orca\calendar</Filter>
+    </ClCompile>
+    <ClCompile Include="src\YearMonthDay.cpp">
+      <Filter>orca\calendar</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Period.cpp">
+      <Filter>orca\calendar</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

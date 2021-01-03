@@ -1,0 +1,3 @@
+interest_rate_swap_code,leg_code_1,leg_code_2,coeff_1,coeff_2
+usd_sofr_ois_short,usd_fixed_ois_short,usd_sofr_on_ois_short,1,-1
+usd_sofr_ois_long,usd_fixed_ois_long,usd_sofr_on_ois_long,1,-1
