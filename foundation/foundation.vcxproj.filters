@@ -16,16 +16,16 @@
     <ClInclude Include="include\orca\Exception.h">
       <Filter>orca</Filter>
     </ClInclude>
-    <ClInclude Include="include\orca\calendar\Date.h">
-      <Filter>orca\calendar</Filter>
-    </ClInclude>
-    <ClInclude Include="include\orca\calendar\Tenor.h">
-      <Filter>orca\calendar</Filter>
-    </ClInclude>
-    <ClInclude Include="include\orca\calendar\YearMonthDay.h">
-      <Filter>orca\calendar</Filter>
-    </ClInclude>
     <ClInclude Include="include\orca\calendar\Period.h">
+      <Filter>orca\calendar</Filter>
+    </ClInclude>
+    <ClInclude Include="include\orca\calendar\DateTime.h">
+      <Filter>orca\calendar</Filter>
+    </ClInclude>
+    <ClInclude Include="include\orca\calendar\Timespan.h">
+      <Filter>orca\calendar</Filter>
+    </ClInclude>
+    <ClInclude Include="include\orca\calendar\BusinessCenters.h">
       <Filter>orca\calendar</Filter>
     </ClInclude>
   </ItemGroup>
@@ -33,16 +33,16 @@
     <ClCompile Include="src\Exception.cpp">
       <Filter>orca</Filter>
     </ClCompile>
-    <ClCompile Include="src\Date.cpp">
-      <Filter>orca\calendar</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Tenor.cpp">
-      <Filter>orca\calendar</Filter>
-    </ClCompile>
-    <ClCompile Include="src\YearMonthDay.cpp">
-      <Filter>orca\calendar</Filter>
-    </ClCompile>
     <ClCompile Include="src\Period.cpp">
+      <Filter>orca\calendar</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DateTime.cpp">
+      <Filter>orca\calendar</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Timespan.cpp">
+      <Filter>orca\calendar</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BusinessCenters.cpp">
       <Filter>orca\calendar</Filter>
     </ClCompile>
   </ItemGroup>

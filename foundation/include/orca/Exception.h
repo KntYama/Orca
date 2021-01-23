@@ -8,30 +8,33 @@
 #include "orca/FoundationExport.h"
 
 namespace orca {
-    class FOUNDATION_API Exception : public std::exception {
-    public:
-        Exception(
-            const std::string& message,
-            const char* fileName,
-            const char* functionName,
-            int line);
 
-        ~Exception() noexcept {}
+class FOUNDATION_API Exception : public std::exception {
+public:
+    Exception(
+        const std::string& message,
+        const char* fileName,
+        const char* functionName,
+        int line);
 
-        const char* what() const noexcept;
+    Exception(const Exception& other);
 
-        const std::string& message() const noexcept { return _message; }
-        const char* fileName() const noexcept { return _fileName; }
-        const char* functionName() const noexcept { return _functionName; }
-        int line() const noexcept { return _line; }
+    ~Exception() noexcept {}
 
-    private:
-        const std::string _what;
-        const std::string _message;
-        const char* _fileName;
-        const char* _functionName;
-        const int _line;
-    };
+    const char* what() const noexcept;
+
+    const std::string& message() const noexcept { return _message; }
+    const char* fileName() const noexcept { return _fileName; }
+    const char* functionName() const noexcept { return _functionName; }
+    int line() const noexcept { return _line; }
+        
+private:
+    const char* _fileName;
+    const char* _functionName;
+    const int _line;
+    const std::string _message; 
+    const std::string _what;                
+}; // class Exception
 } // namespace orca
 
 #define ORCA_THROW_EXCEPTION(message) \

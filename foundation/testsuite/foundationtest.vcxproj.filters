@@ -3,6 +3,6 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ExceptionTest.cpp" />
-    <ClCompile Include="src\DateTest.cpp" />
+    <ClCompile Include="src\DateTimeTest.cpp" />
   </ItemGroup>
 </Project>
